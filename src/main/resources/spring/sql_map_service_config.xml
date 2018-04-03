@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="localCacheScope" value="STATEMENT" />
+	</settings>
+
+	<typeAliases>		
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreAccount" alias="CoreAccount" />	
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreAttachment" alias="CoreAttachment" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreCustomerService" alias="CoreCustomerService" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreFunction" alias="CoreFunction" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreMessageCenter" alias="CoreMessageCenter" />		
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreRegion" alias="CoreRegion" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreRole" alias="CoreRole" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreShortMessage" alias="CoreShortMessage" />		
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreSystemConfig" alias="CoreSystemConfig" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreSystemSet" alias="CoreSystemSet" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.CoreUser" alias="CoreUser" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiBanner" alias="BusiBanner" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiEvaluate" alias="BusiEvaluate" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiExpressCode" alias="BusiExpressCode" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiExpressConfig" alias="BusiExpressConfig" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiHotSpot" alias="BusiHotSpot" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiIndexProduct" alias="BusiIndexProduct" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiMessageCenter" alias="BusiMessageCenter" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiOrder" alias="BusiOrder" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiOrderExpress" alias="BusiOrderExpress" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiProduct" alias="BusiProduct" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiProductCategory" alias="BusiProductCategory" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiRechargeRecord" alias="BusiRechargeRecord" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiServerDynamic" alias="BusiServerDynamic" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiServerType" alias="BusiServerType" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiShippingAddress" alias="BusiShippingAddress" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiSignRecord" alias="BusiSignRecord" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiSignRule" alias="BusiSignRule" />
+		<typeAlias type="com.xiaoyu.lingdian.entity.BusiTagSet" alias="BusiTagSet" />
+	</typeAliases>
+
+	<plugins>
+		<plugin interceptor="com.xiaoyu.lingdian.core.mybatis.plugin.SelectCountSqlInterceptor" />
+		<plugin interceptor="com.xiaoyu.lingdian.core.mybatis.plugin.OffsetLimitInterceptor">
+			<property name="dialectClass" value="com.xiaoyu.lingdian.core.mybatis.dialect.MySQLDialect" />
+		</plugin>
+	</plugins>
+
+	<mappers>
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreAccountMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreAttachmentMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreCustomerServiceMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreFunctionMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreMessageCenterMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreRegionMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreRoleMapper.xml" />		
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreShortMessageMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreSystemConfigMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreSystemSetMapper.xml" />	
+		<mapper resource="com/xiaoyu/lingdian/mapper/CoreUserMapper.xml" />		
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiBannerMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiEvaluateMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiExpressCodeMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiExpressConfigMapper.xml" />		
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiHotSpotMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiIndexProductMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiMessageCenterMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiOrderMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiOrderExpressMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiProductMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiProductCategoryMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiRechargeRecordMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiServerDynamicMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiServerTypeMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiShippingAddressMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiSignRecordMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiSignRuleMapper.xml" />
+		<mapper resource="com/xiaoyu/lingdian/mapper/BusiTagSetMapper.xml" />
+	</mappers>
+</configuration>
